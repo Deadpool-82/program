@@ -1,4 +1,7 @@
-#include<bits/stdc++.h>  //adjacency list, weighted, undirected graph 
+#include<iostream>
+#include<vector>
+#include<stdlib.h>
+#include<deque>  //adjacency list, weighted, undirected graph 
 #define pb push_back
 #define mp make_pair
 using namespace std;
@@ -113,16 +116,16 @@ class Graph
 main()
 {
 	Graph g(5);
-	g.addEdge(0,1,10);
-	g.addEdge(0,2,6);
-	g.addEdge(0,3,5);
-	g.addEdge(2,3,4);
-	g.addEdge(1,3,15);
-	g.addEdge(3,4,8);
+	g.addEdge(0,1,2);
+	g.addEdge(0,3,6);
+	g.addEdge(1,3,8);
+	g.addEdge(1,4,5);
+	g.addEdge(2,1,3);
+	g.addEdge(2,4,7);
+	g.addEdge(3,4,9);
 	cout<<endl<<"BFS from node 1 "<<endl;
-	g.BFS(1);
+	g.BFS(0);
 	cout<<endl<<"DFS from node 1 "<<endl;
-	g.DFS(1);
+	g.DFS(0);
 	
 }
-
